@@ -185,7 +185,7 @@ function App() {
           <div className='pt-4 pb-4' key={index}>{data}</div>
         )
       })}
-      <div className='flex justify-center gap-4'>
+      <div className='flex justify-center gap-4 pb-5'>
         <button
           onClick={handleClick}
           className='bg-sky-600 p-2 font-bold text-white'
