@@ -23,7 +23,10 @@ h2 {
 
 hr {
   margin-top: 30px;
-  border-bottom: 1px dashed lightgray
+  border-bottom: 1px dashed lightgray;
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
 }
 
 label {
