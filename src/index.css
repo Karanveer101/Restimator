@@ -15,7 +15,16 @@ input[type='text'], select, input[type='number'], textarea {
   border: 1px solid lightgrey;
 }
 
+h2 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+}
 
+hr {
+  margin-top: 30px;
+  border-bottom: 1px dashed lightgray
+}
 
 label {
   display: inline-block;

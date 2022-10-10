@@ -29,14 +29,17 @@ function App() {
 
   return (
     <div className='md:w-[1000px] m-auto'>
-      <header className='text-center text-2xl text-white font-bold bg-sky-600'>
+      <header className='text-center flex justify-center items-center h-24 text-2xl align-middle text-white font-bold bg-sky-600'>
         New Estimate
       </header>
 
       <section className='flex flex-col gap-2 items-center'>
-        <h2 className='text-center font-bold'>Customer Information</h2>
+        <h2 className='text-center font-bold'>
+          <span className='inline-block leading-[25px] h-[25px] w-[25px] mr-2 bg-green-500 rounded-full'>A</span>Customer
+          Information
+        </h2>
         <div>
-          <label htmlFor='name'>NAME:</label>
+          <label htmlFor='name'>Name:</label>
           <input
             onChange={handleChange}
             type='text'
@@ -46,7 +49,7 @@ function App() {
         </div>
 
         <div>
-          <label htmlFor='street'>STREET:</label>
+          <label htmlFor='street'>Street:</label>
           <input
             onChange={handleChange}
             type='text'
@@ -56,7 +59,7 @@ function App() {
         </div>
 
         <div>
-          <label htmlFor='city'>CITY:</label>
+          <label htmlFor='city'>City:</label>
           <input
             onChange={handleChange}
             type='text'
@@ -66,7 +69,7 @@ function App() {
         </div>
 
         <div>
-          <label htmlFor='postal'>POSTAL CODE:</label>
+          <label htmlFor='postal'>Postal code:</label>
           <input
             onChange={handleChange}
             type='text'
@@ -76,8 +79,11 @@ function App() {
         </div>
       </section>
 
+      <hr></hr>
+
       <section className='flex flex-col items-center'>
-        <h2 className='text-center font-bold'>Project Description</h2>
+        <h2 className='text-center font-bold'> 
+        <span className='inline-block h-[25px] leading-[25px]  w-[25px] mr-2 bg-green-500 rounded-full'>B</span>Project Description</h2>
         <textarea
           className='w-4/5'
           onChange={handleChange}
@@ -87,11 +93,12 @@ function App() {
         ></textarea>
       </section>
 
-      <section>
-        <h2 className='text-center font-bold'>Work To Be Completed</h2>
-        <label htmlFor='job'>Choose a job:</label>
+      <hr></hr>
+
+      <section className='flex flex-col items-center gap-6'>
+        <h2 className='text-center font-bold'><span className='inline-block h-[25px] w-[25px] mr-2 leading-[25px]  bg-green-500 rounded-full'>C</span>Work To Be Completed</h2>
         <select onChange={handleChange} name='job' id='job'>
-          <option>--select--</option>
+          <option className='text-center'>--select a job--</option>
           <option value='Bathroom - Master Bedroom'>
             Bathroom - Master Bedroom
           </option>
@@ -103,19 +110,40 @@ function App() {
             Bathroom - Upper Level Bedroom
           </option>
         </select>
-        <button type='button'>Insert Custom</button>
-        <button type='button'>Add Note</button>
+        <div className='flex gap-4'>
+          <button
+            className='bg-green-500 p-2  text-white text-sm'
+            type='button'
+          >
+            Insert Custom
+          </button>
+          <button
+            className='bg-green-500  text-white p-2 text-sm'
+            type='button'
+          >
+            Add Note
+          </button>
+        </div>
         <input
+          className='p-1 text-center'
           onChange={handleChange}
           type='number'
           name='total'
           min='1'
           placeholder='Total'
         ></input>
-        <button type='button'>New job</button>
-        <button onClick={handleSubmit} type='submit'>
-          Submit
-        </button>
+        <div className='flex gap-4'>
+          <button className='bg-sky-600 p-2 font-bold text-white' type='button'>
+            New job
+          </button>
+          <button
+            className='bg-sky-900 p-2 font-bold text-white'
+            onClick={handleSubmit}
+            type='submit'
+          >
+            SUBMIT
+          </button>
+        </div>
       </section>
     </div>
   );
